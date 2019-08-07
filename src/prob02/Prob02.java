@@ -11,12 +11,11 @@ public class Prob02 {
 		int intArray[] = new int[5];
 			
 		double sum = 0;
-
-		intArray[0] = 10;
-		intArray[1] = 20;
-		intArray[2] = 30;
-		intArray[3] = 40;
-		intArray[4] = 50;
+		
+		for (int i = 0; i < intArray.length; i++) {
+			intArray[i]=scanner.nextInt();
+			sum += intArray[i];
+		}		
 		
 		for(int i=0; i < intArray.length; i++) {
 			sum += intArray[i]; 
@@ -25,7 +24,6 @@ public class Prob02 {
 		
 		double average = sum / intArray.length;
 		System.out.println("평균은" + average + "입니다.");
-		
 		scanner.close();
 	}
 }
